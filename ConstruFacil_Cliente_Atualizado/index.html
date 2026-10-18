@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ConstruFácil — encontre profissionais para seus serviços de acabamento.">
+  <title>ConstruFácil | Área do Cliente</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+    <a class="brand" href="#" data-page="home" aria-label="ConstruFácil início"><span class="brand-mark">⌂</span><span class="brand-name">ConstruFácil</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+      <button class="nav-link active" data-page="home">Início</button>
+      <button class="nav-link" data-page="servicos">Serviços</button>
+      <button class="nav-link" data-page="sobre">Sobre nós</button>
+      <button class="nav-link" data-page="orcamento">Orçamentos</button>
+      <button class="nav-link" data-page="contato">Mensagens</button>
+    </nav>
+    <div class="header-account"><span class="account-avatar" id="topAvatar">●</span><span id="headerGreeting">Olá, visitante</span><button class="header-login" id="headerLogin">♙ Login</button></div>
+  </header>
+    <main class="main-area">
+      <section class="page auth-page" id="authPage">
+        <div class="auth-art">
+          <div class="auth-logo"><span class="brand-mark">⌂</span><strong>ConstruFácil</strong></div>
+          <div class="auth-message"><span class="eyebrow">SEU PROJETO COMEÇA AQUI</span><h1>Encontre o profissional certo para transformar seu espaço.</h1><p>Conectamos você a profissionais de serviços e acabamentos para sua casa.</p></div>
+          <div class="auth-decoration"><span>⌂</span><span>＋</span><span>✓</span></div>
+          <small>Praticidade, organização e confiança em cada etapa.</small>
+        </div>
+        <div class="auth-panel">
+          <div class="auth-tabs"><button class="auth-tab selected" data-auth="login">Entrar</button><button class="auth-tab" data-auth="cadastro">Criar conta</button></div>
+          <form id="loginForm" class="auth-form">
+            <span class="eyebrow">BEM-VINDO(A) DE VOLTA</span><h2>Acesse sua conta</h2><p class="muted">Entre para acompanhar seus serviços.</p>
+            <label for="loginEmail">E-mail</label><input id="loginEmail" type="email" placeholder="voce@email.com" required>
+            <label for="loginPassword">Senha</label><input id="loginPassword" type="password" placeholder="Digite sua senha" minlength="4" required>
+            <div class="form-row between"><label class="check-label"><input type="checkbox"> Manter conectado</label><button type="button" class="text-button" id="forgotButton">Esqueci minha senha</button></div>
+            <button class="primary-button full" type="submit">Entrar na plataforma <span>→</span></button>
+            <p class="demo-note">Protótipo acadêmico: use qualquer e-mail válido e uma senha com pelo menos 4 caracteres.</p>
+          </form>
+          <form id="registerForm" class="auth-form hidden">
+            <span class="eyebrow">VAMOS COMEÇAR</span><h2>Crie sua conta</h2><p class="muted">Preencha seus dados para acessar a plataforma.</p>
+            <label for="registerName">Nome completo</label><input id="registerName" type="text" placeholder="Seu nome" required>
+            <label for="registerEmail">E-mail</label><input id="registerEmail" type="email" placeholder="voce@email.com" required>
+            <label for="registerPhone">Telefone</label><input id="registerPhone" type="tel" placeholder="(00) 00000-0000" required>
+            <label for="registerPassword">Senha</label><input id="registerPassword" type="password" placeholder="Crie uma senha" minlength="4" required>
+            <label class="check-label consent"><input type="checkbox" required> Concordo com o uso dos meus dados para fins de demonstração deste protótipo.</label>
+            <button class="primary-button full" type="submit">Criar conta <span>→</span></button>
+          </form>
+        </div>
+      </section>
+
+      <section class="page hidden" id="dashboardPage">
+        <section class="home-hero"><div class="hero-copy">
+          <span class="eyebrow">CONSTRUÇÃO E REFORMA</span>
+          <h1>Soluções completas para o seu projeto</h1>
+          <p>A ConstruFácil conecta você aos melhores profissionais para tornar seu projeto realidade com qualidade e segurança.</p>
+          <button class="primary-button" data-page="orcamento">▤ Solicitar orçamento</button>
+        </div></section>
+        <div class="section-heading"><div><h2>Nossos serviços</h2><p class="muted">Soluções para cada etapa do seu projeto.</p></div><button class="text-button" data-page="prestadores">Ver todas →</button></div>
+        <div class="category-grid">
+          <button class="category-card" data-category="Pintura"><span class="category-icon blue">▧</span><strong>Pintura</strong><small>Paredes e acabamentos</small></button>
+          <button class="category-card" data-category="Pisos e revestimentos"><span class="category-icon green">▦</span><strong>Pisos e revestimentos</strong><small>Renove seus ambientes</small></button>
+          <button class="category-card" data-category="Gesso e drywall"><span class="category-icon gold">⌑</span><strong>Gesso e drywall</strong><small>Detalhes e instalação</small></button>
+          <button class="category-card" data-category="Papel de parede"><span class="category-icon purple">▤</span><strong>Papel de parede</strong><small>Personalize seu espaço</small></button>
+        </div>
+
+        <div class="content-grid">
+          <div class="content-card">
+            <div class="section-heading compact"><div><h2>Atalhos rápidos</h2><p class="muted">Acesse as principais funções.</p></div></div>
+            <div class="shortcut-list">
+              <button class="shortcut" data-page="orcamento"><span class="shortcut-icon">▤</span><span><strong>Solicitar orçamento</strong><small>Conte o que você precisa fazer.</small></span><b>→</b></button>
+              <button class="shortcut" data-page="agendamento"><span class="shortcut-icon">▦</span><span><strong>Agendar serviço</strong><small>Organize a data do atendimento.</small></span><b>→</b></button>
+              <button class="shortcut" data-page="historico"><span class="shortcut-icon">◷</span><span><strong>Ver meu histórico</strong><small>Acompanhe suas solicitações.</small></span><b>→</b></button>
+            </div>
+          </div>
+          <div class="content-card highlight-card"><span class="highlight-symbol">✦</span><span class="eyebrow">DICA CONSTRUFÁCIL</span><h2>Planeje com tranquilidade</h2><p>Descreva o serviço com detalhes para ajudar o profissional a entender melhor sua necessidade.</p><button class="secondary-button" data-page="orcamento">Começar orçamento →</button></div>
+        </div>
+        <div class="section-heading"><div><h2>Solicitações recentes</h2><p class="muted">Acompanhe as atividades registradas neste protótipo.</p></div><button class="text-button" data-page="historico">Ver histórico →</button></div>
+        <div id="recentRequests" class="request-list"><div class="empty-state">Você ainda não tem solicitações. Comece pedindo um orçamento.</div></div>
+      </section>
+
+      <section class="page hidden" id="prestadoresPage">
+        <div class="page-intro"><span class="eyebrow">ENCONTRE UM PROFISSIONAL</span><h1>Buscar prestadores</h1><p class="muted">Use os filtros para encontrar profissionais adequados ao seu serviço.</p></div>
+        <div class="content-card">
+          <form id="providerSearchForm" class="filter-form"><div class="field-grow"><label for="providerSearch">Serviço ou profissional</label><input id="providerSearch" type="search" placeholder="Ex.: pintura, pisos, gesso"></div><div><label for="providerRegion">Região</label><input id="providerRegion" type="text" placeholder="Cidade ou bairro"></div><div><label for="providerSort">Ordenar por</label><select id="providerSort"><option value="recommended">Recomendados</option><option value="rating">Melhor avaliação</option><option value="name">Nome</option></select></div><button class="primary-button" type="submit">Buscar</button></form>
+          <div class="notice"><strong>Importante:</strong> os cartões abaixo são exemplos demonstrativos. A lista real de prestadores depende da integração com a API prevista no PI.</div>
+          <div class="provider-grid" id="providerResults"></div>
+        </div>
+      </section>
+
+      <section class="page hidden" id="servicosPage">
+        <div class="services-title"><h1>Tipos de Serviço</h1></div>
+        <div class="services-showcase">
+          <button class="service-tile" data-service-category="Pintura"><span class="tile-icon">▰</span><strong>Pintura</strong><small>Acabamentos de alta qualidade para renovar seu ambiente.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Elétrica"><span class="tile-icon">ϟ</span><strong>Elétrica</strong><small>Instalações e manutenções elétricas com segurança.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Hidráulica"><span class="tile-icon">♧</span><strong>Hidráulica</strong><small>Soluções completas em hidráulica com eficiência e durabilidade.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Alvenaria"><span class="tile-icon">▦</span><strong>Alvenaria</strong><small>Construções e reformas com precisão e ótimo acabamento.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Marcenaria"><span class="tile-icon">⌁</span><strong>Marcenaria</strong><small>Instalações, reparos e soluções em madeira.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Marmoraria"><span class="tile-icon">◇</span><strong>Marmoraria</strong><small>Soluções em pedras, bancadas e acabamentos.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Reboco"><span class="tile-icon">▧</span><strong>Reboco</strong><small>Preparação e acabamento de paredes.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Drywall e Forro"><span class="tile-icon">▤</span><strong>Drywall e Forro</strong><small>Forros, divisórias e detalhes em gesso.</small><b>→</b></button>
+          <button class="service-tile" data-service-category="Revestimento"><span class="tile-icon">▩</span><strong>Revestimento</strong><small>Renove seus ambientes com revestimentos.</small><b>→</b></button>
+        </div>
+      </section>
+      <section class="page hidden" id="sobrePage">
+        <div class="page-intro"><span class="eyebrow">QUEM SOMOS</span><h1>Sobre a ConstruFácil</h1><p class="muted">Uma plataforma pensada para aproximar clientes e profissionais de construção, reforma e acabamento.</p></div>
+        <div class="about-panel"><div class="about-mark">⌂</div><div><h2>Seu projeto, com mais praticidade</h2><p>A ConstruFácil organiza a busca por prestadores, a solicitação de orçamentos e o acompanhamento dos serviços em uma experiência simples e acessível.</p><button class="primary-button" data-page="prestadores">Encontrar profissionais →</button></div></div>
+      </section>
+      <section class="page hidden" id="orcamentoPage">
+        <div class="page-intro"><span class="eyebrow">CONTE SUA IDEIA</span><h1>Solicitar orçamento</h1><p class="muted">Informe os detalhes do serviço para organizar sua solicitação.</p></div>
+        <div class="form-layout"><div class="content-card"><form id="budgetForm" class="standard-form">
+          <div class="form-section-title"><span>01</span><div><h2>Detalhes do serviço</h2><p class="muted">Quanto mais detalhes, melhor.</p></div></div>
+          <label for="budgetCategory">Categoria do serviço *</label><select id="budgetCategory" required><option value="">Selecione uma categoria</option><option>Pintura</option><option>Pisos e revestimentos</option><option>Gesso e drywall</option><option>Papel de parede</option><option>Instalações</option><option>Outro acabamento</option></select>
+          <label for="budgetTitle">Título da solicitação *</label><input id="budgetTitle" required placeholder="Ex.: Pintura da sala e dos quartos">
+          <label for="budgetDescription">Descreva o que precisa ser feito *</label><textarea id="budgetDescription" required rows="5" placeholder="Conte o tamanho aproximado, os materiais desejados e outros detalhes..."></textarea>
+          <div class="two-fields"><div><label for="budgetLocation">Local do serviço *</label><input id="budgetLocation" required placeholder="Cidade ou bairro"></div><div><label for="budgetDate">Quando gostaria de realizar?</label><input id="budgetDate" type="date"></div></div>
+          <label for="budgetRange">Faixa de orçamento (opcional)</label><select id="budgetRange"><option value="">Ainda não defini</option><option>Até R$ 500</option><option>R$ 500 a R$ 1.500</option><option>R$ 1.500 a R$ 3.000</option><option>Acima de R$ 3.000</option></select>
+          <div class="form-actions"><button class="secondary-button" type="reset">Limpar</button><button class="primary-button" type="submit">Registrar solicitação →</button></div>
+        </form></div><aside class="side-info"><div class="info-icon">✦</div><h3>Antes de enviar</h3><p>Inclua medidas aproximadas, o ambiente e o resultado esperado. Isso ajuda na análise do pedido.</p><ul><li>Descreva o serviço com clareza.</li><li>Informe a região de atendimento.</li><li>Confira os dados antes de registrar.</li></ul></aside></div>
+      </section>
+
+      <section class="page hidden" id="agendamentoPage">
+        <div class="page-intro"><span class="eyebrow">ORGANIZE SEU ATENDIMENTO</span><h1>Agendar serviço</h1><p class="muted">Registre a preferência de data e horário para o serviço.</p></div>
+        <div class="form-layout"><div class="content-card"><form id="scheduleForm" class="standard-form">
+          <div class="form-section-title"><span>02</span><div><h2>Dados do agendamento</h2><p class="muted">Preencha as informações solicitadas.</p></div></div>
+          <label for="scheduleService">Serviço *</label><input id="scheduleService" required placeholder="Ex.: Instalação de piso">
+          <label for="scheduleProvider">Prestador (se já escolheu)</label><input id="scheduleProvider" placeholder="Nome do profissional">
+          <div class="two-fields"><div><label for="scheduleDate">Data desejada *</label><input id="scheduleDate" type="date" required></div><div><label for="scheduleTime">Horário preferencial *</label><select id="scheduleTime" required><option value="">Selecione</option><option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option></select></div></div>
+          <label for="scheduleAddress">Endereço ou região *</label><input id="scheduleAddress" required placeholder="Cidade, bairro ou endereço">
+          <label for="scheduleNotes">Observações</label><textarea id="scheduleNotes" rows="4" placeholder="Informações adicionais para o atendimento"></textarea>
+          <div class="notice">Este registro representa uma preferência de agendamento no protótipo. A confirmação de disponibilidade depende da integração com o back-end.</div>
+          <div class="form-actions"><button class="secondary-button" type="reset">Limpar</button><button class="primary-button" type="submit">Registrar agendamento →</button></div>
+        </form></div><aside class="side-info"><div class="info-icon">▦</div><h3>Organize seu tempo</h3><p>Escolha uma data futura e informe um horário preferencial. O agendamento real precisa ser validado com a disponibilidade do profissional.</p></aside></div>
+      </section>
+
+      <section class="page hidden" id="historicoPage">
+        <div class="page-intro"><span class="eyebrow">ACOMPANHAMENTO</span><h1>Histórico de serviços</h1><p class="muted">Consulte os pedidos e agendamentos registrados nesta demonstração.</p></div>
+        <div class="stats-row"><div class="stat-card"><span>Solicitações</span><strong id="statRequests">0</strong><small>Orçamentos registrados</small></div><div class="stat-card"><span>Agendamentos</span><strong id="statSchedules">0</strong><small>Preferências registradas</small></div><div class="stat-card"><span>Concluídos</span><strong>0</strong><small>Sem dados reais integrados</small></div></div>
+        <div class="content-card"><div class="section-heading compact"><div><h2>Todos os registros</h2><p class="muted">Os dados ficam salvos localmente neste navegador de demonstração.</p></div><select id="historyFilter" aria-label="Filtrar histórico"><option value="all">Todos</option><option value="Orçamento">Orçamentos</option><option value="Agendamento">Agendamentos</option></select></div><div id="historyList" class="request-list"></div></div>
+      </section>
+
+      <section class="page hidden" id="contatoPage">
+        <div class="page-intro"><span class="eyebrow">ESTAMOS AQUI PARA AJUDAR</span><h1>Contato e suporte</h1><p class="muted">Envie uma mensagem demonstrativa para registrar sua dúvida.</p></div>
+        <div class="form-layout"><div class="content-card"><form id="supportForm" class="standard-form"><label for="supportSubject">Assunto *</label><select id="supportSubject" required><option value="">Selecione um assunto</option><option>Dúvida sobre orçamento</option><option>Agendamento</option><option>Cadastro e acesso</option><option>Outro assunto</option></select><label for="supportEmail">Seu e-mail *</label><input id="supportEmail" type="email" required placeholder="voce@email.com"><label for="supportMessage">Mensagem *</label><textarea id="supportMessage" rows="6" required placeholder="Como podemos ajudar?"></textarea><div class="form-actions"><button class="primary-button" type="submit">Registrar mensagem →</button></div></form></div><aside class="side-info"><div class="info-icon">✉</div><h3>Canal de atendimento</h3><p>Esta tela é parte do protótipo acadêmico. O envio real de mensagens precisa de um serviço conectado ao back-end.</p></aside></div>
+      </section>
+
+      <footer class="footer"><span>© 2026 ConstruFácil — Projeto Integrador</span><span>Protótipo acadêmico • Área do cliente</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
