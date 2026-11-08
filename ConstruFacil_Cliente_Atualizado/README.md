@@ -1,32 +1,20 @@
-# ConstruFácil_Cliente — Protótipo Front-end
+# ConstruFácil: Protótipo Front-end
 
-Protótipo acadêmico atualizado com base nas telas de referência enviadas pelo grupo.
+Protótipo acadêmico do ConstruFácil, marketplace de serviços de acabamento para casas.
 
-## Como abrir
-1. Extraia o ZIP.
-2. Abra a pasta `ConstruFacil_Cliente_Atualizado` no Visual Studio Code.
-3. Abra `index.html` no navegador. Para desenvolvimento, use a extensão **Live Server** e clique em **Go Live**.
-4. Entre com um e-mail válido e senha com pelo menos 4 caracteres, ou use a opção de criar conta.
+## Como executar
 
-## Telas
-- Login e cadastro demonstrativos
-- Página inicial com banner visual e atalhos
-- Tipos de serviço: Pintura, Elétrica, Hidráulica, Alvenaria, Marcenaria, Marmoraria, Reboco, Drywall e Forro, Revestimento
-- Busca demonstrativa de prestadores
-- Solicitação de orçamento
-- Registro de preferência de agendamento
-- Histórico local de solicitações e agendamentos
-- Sobre nós e mensagens/suporte
+1. Clone o repositório: `git clone https://github.com/OnlyJon09/Contrufacil_Client.git`
+2. Abra a pasta no VS Code.
+3. Clique com o botão direito em `index.html` e escolha **Open with Live Server** (extensão Live Server).
 
-## Tecnologias
-- HTML5, CSS3 e JavaScript
-- Layout responsivo, Flexbox, Grid e media queries
-- `assets/hero-sala.jpg`: recorte da imagem residencial enviada como referência visual
+## Estrutura
 
-## Limitações importantes
-Este pacote é somente o **front-end demonstrativo**. Os dados de conta e solicitações são salvos localmente no navegador. Não há autenticação segura, API conectada, envio real de orçamento, confirmação de disponibilidade, pagamento nem persistência no PostgreSQL. Os prestadores exibidos são exemplos fictícios.
+- `index.html`: estrutura das telas
+- `css/style.css`: aparência e adaptação a telas menores
+- `js/app.js`: navegação, validações e armazenamento local
+- `assets/`: imagens utilizadas no projeto
 
-A arquitetura prevista no PI utiliza Python/FastAPI no back-end e PostgreSQL no banco de dados. Essa integração precisa ser desenvolvida e testada separadamente.
+## Limitações
 
-## Evidências para a documentação do PI
-Após abrir e testar o projeto, capture as telas de login, cadastro, home, tipos de serviço, busca de prestadores, orçamento, agendamento e histórico. Descreva esta versão como protótipo front-end.
+Os dados são simulados e salvos no navegador. A integração com o back-end em Python (FastAPI) e o banco PostgreSQL será feita na próxima fase.
