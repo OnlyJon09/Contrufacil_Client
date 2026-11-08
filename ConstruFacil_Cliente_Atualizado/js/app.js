@@ -116,7 +116,9 @@
   $("#loginForm").addEventListener("submit",event=>{
     event.preventDefault();
     const email=$("#loginEmail").value.trim(), password=$("#loginPassword").value;
-    if(!email||password.length<4){showToast("Confira seu e-mail e informe uma senha com pelo menos 4 caracteres.");return;}
+ if(!email){showToast("Informe seu e-mail.");return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showToast("Digite um e-mail válido, como nome@exemplo.com.");return;}
+    if(password.length<4){showToast("A senha precisa ter pelo menos 4 caracteres.");return;}
     const existing=readUser();
     const user=existing&&existing.email===email?existing:{name:email.split("@")[0].replace(/[._-]/g," ").replace(/\b\w/g,c=>c.toUpperCase()),email};
     localStorage.setItem(STORAGE_KEYS.user,JSON.stringify(user));setUserUI(user);requireLoginAfterAuth();showToast("Acesso demonstrativo realizado com sucesso.");
